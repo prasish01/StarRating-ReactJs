@@ -1,0 +1,33 @@
+/* Center the star rating container */
+body {
+  padding: 5%;
+  background: #344955;
+}
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Star style with transition and hover effects */
+.star-rating svg {
+  color: #ddd; /* Default color for unselected stars */
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.star-rating svg.active {
+  color: #ffca2c; /* Bright golden color for selected stars */
+}
+
+/* Add a scale effect on hover */
+.star-rating svg:hover {
+  transform: scale(1.15);
+}
+
+/* Hover effect for stars */
+.star-rating svg.active:hover {
+  color: #ffd700; /* Slightly brighter color on hover */
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)); /* Subtle shadow */
+}
